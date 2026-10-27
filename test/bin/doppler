@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Fake Doppler CLI: prints JSON secrets for --config dev|stg|prd.
+cfg=""; while [ $# -gt 0 ]; do [ "$1" = --config ] && cfg="$2"; shift; done
+case "$cfg" in
+    dev) env=dev ;; stg) env=stg ;; prd) env=prd ;; dev_personal) env=dev ;;
+    odd) env=qa ;;
+    *) echo "Could not find requested config '$cfg'" >&2; exit 1 ;;
+esac
+printf '{"DOPPLER_PROJECT":"app","DOPPLER_ENVIRONMENT":"%s","DOPPLER_CONFIG":"%s","EXPO_PUBLIC_API_URL":"https://%s.example","API_SECRET":"s3cr3t-%s","EMPTY_ONE":"","FAIL_ME":"boom-value"}\n' "$env" "$cfg" "$cfg" "$cfg"

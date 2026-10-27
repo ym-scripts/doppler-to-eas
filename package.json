@@ -1,0 +1,39 @@
+{
+  "name": "doppler-to-eas",
+  "version": "0.1.0",
+  "description": "Copy Doppler secrets into EAS (Expo) environments, with secret/plaintext visibility handled for you",
+  "type": "module",
+  "bin": {
+    "doppler-to-eas": "doppler-to-eas.mjs"
+  },
+  "files": [
+    "doppler-to-eas.mjs"
+  ],
+  "scripts": {
+    "test": "node --test test/doppler-to-eas.test.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "doppler",
+    "eas",
+    "expo",
+    "react-native",
+    "secrets",
+    "environment-variables",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ym-scripts/doppler-to-eas.git"
+  },
+  "homepage": "https://github.com/ym-scripts/doppler-to-eas#readme",
+  "bugs": "https://github.com/ym-scripts/doppler-to-eas/issues",
+  "author": {
+    "name": "Aghogho Meyoron",
+    "email": "youngmayor.dev@gmail.com",
+    "url": "https://youngmayor.mlabs.ng"
+  },
+  "license": "MIT"
+}
